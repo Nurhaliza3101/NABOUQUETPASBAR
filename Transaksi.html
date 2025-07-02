@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>N & A BOUQUET PASBAR</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    header .highlight {
+      color: #d4a056;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f9f9f9;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d4a056;
+    }
+
+    .icons span {
+      margin-left: 15px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .hero-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #d4a056;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, select, textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #000;
+      color: #fff;
+    }
+
+    button {
+      background-color: #d4a056;
+      color: #000;
+      padding: 12px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b88842;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><span class="highlight">N & A</span> BOUQUET PASBAR.</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="Produk.html">Produk</a></li>
+          <li><a href="Transaksi.html">Transaksi</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <span>🔍</span>
+        <span>🛒</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Formulir Transaksi</h2>
+      <form action="https://wa.me/6281234567890" method="get" target="_blank" onsubmit="return sendWhatsAppMessage()">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required>
+        <input type="text" id="alamat" placeholder="Alamat Lengkap" required>
+        <select id="produk" required>
+          <option value="">-- Pilih Produk --</option>
+          <option value="Bouquet Mawar Merah">Bouquet Mawar Merah</option>
+          <option value="Akrilik Custom Nama">Akrilik Custom Nama</option>
+          <option value="Gantungan Kunci Handmade">Gantungan Kunci Handmade</option>
+        </select>
+        <textarea id="catatan" placeholder="Catatan tambahan (opsional)" rows="3"></textarea>
+        <button type="submit">Kirim Pesanan</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 N & A BOUQUET PASBAR. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendWhatsAppMessage() {
+      const nama = document.getElementById('nama').value;
+      const alamat = document.getElementById('alamat').value;
+      const produk = document.getElementById('produk').value;
+      const catatan = document.getElementById('catatan').value;
+
+      const no_wa = "6281234567890"; // Ganti dengan nomor WA admin
+      const pesan = `Halo, saya ingin memesan:\n\nNama: ${nama}\nAlamat: ${alamat}\nProduk: ${produk}\nCatatan: ${catatan}`;
+      const url = `https://wa.me/${no_wa}?text=${encodeURIComponent(pesan)}`;
+
+      window.open(url, "_blank");
+      return false;
+    }
+  </script>
+</body>
+</html>
