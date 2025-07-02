@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>N & A BOUQUET PASBAR</title>
+  <style>
+    /* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+}
+.container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+/* Header */
+header {
+  background-color: #000;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.highlight {
+  color: #d4a056;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d4a056;
+}
+
+.icons span {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Tentang Kami */
+.tentang {
+  padding: 60px 20px;
+  background-color: #111;
+}
+
+.tentang-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tentang-img img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.tentang-text h2 {
+  font-size: 36px;
+  color: #d4a056;
+  margin-bottom: 20px;
+}
+
+.tentang-text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tentang-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <h1><span class="highlight">N & A</span> BOUQUET PASBAR.</h1>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="tentangkami.html">Tentang Kami</a></li>
+          <li><a href="Produk.html">Produk</a></li>
+          <li><a href="Transaksi.html">Transaksi</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <span>🔍</span>
+        <span>🛒</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Daftar Produk -->
+<section class="tentang" id="tentang">
+  <div class="container tentang-container">
+    
+    <div class="tentang-text">
+      <h2>Produk Unggulan</h2>
+    <div class="tentang-img">
+      <img src="bk.jpg" alt="Bouquet" />
+    </div>
+      <h3>Bouquet Mawar Merah</h3>
+      <p>Dirangkai dengan hati menggunakan bunga mawar berkualitas. Cocok untuk hadiah ulang tahun, wisuda, atau ungkapan cinta.</p>
+      <p><strong>Harga:</strong> Rp 120.000</p>
+<a href="Transaksi.html" style="background-color:#d4a056; padding:10px 20px; border-radius:6px; text-decoration:none; color:black; font-weight:bold; display:inline-block; margin-top:10px;">Beli Sekarang</a>
+
+      <hr style="margin: 30px 0; border-color: #333;" />
+
+      <div class="tentang-img">
+      <img src="ak.jpg" alt="Bouquet" />
+    </div>
+      <h3>Akrilik Custom Nama</h3>
+      <p>Desain akrilik estetik yang bisa disesuaikan dengan nama atau ucapan favoritmu. Dibuat khusus sesuai pesanan.</p>
+      <p><strong>Harga:</strong> Rp 75.000</p>
+<a href="Transaksi.html" style="background-color:#d4a056; padding:10px 20px; border-radius:6px; text-decoration:none; color:black; font-weight:bold; display:inline-block; margin-top:10px;">Beli Sekarang</a>
+
+      <hr style="margin: 30px 0; border-color: #333;" />
+
+      <div class="tentang-img">
+      <img src="gc.jpg" alt="Bouquet" />
+    </div>
+      <h3>Gantungan Kunci Handmade</h3>
+      <p>Gantungan kunci lucu dan unik dari bahan resin dan clay, cocok sebagai souvenir atau kado sahabat.</p>
+      <p><strong>Harga:</strong> Rp 25.000</p>
+<a href="Transaksi.html" style="background-color:#d4a056; padding:10px 20px; border-radius:6px; text-decoration:none; color:black; font-weight:bold; display:inline-block; margin-top:10px;">Beli Sekarang</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer style="text-align: center;">
+   <p>&copy; 2025 N & A BOUQUET PASBAR. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
